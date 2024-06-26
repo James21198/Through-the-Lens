@@ -1,4 +1,3 @@
-// Import the `useParams()` hook
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
@@ -8,11 +7,9 @@ import CommentForm from '../components/CommentForm';
 import { QUERY_SINGLE_THOUGHT } from '../utils/queries';
 
 const SingleThought = () => {
-  // Use `useParams()` to retrieve value of the route parameter `:profileId`
   const { thoughtId } = useParams();
 
   const { loading, data } = useQuery(QUERY_SINGLE_THOUGHT, {
-    // pass URL parameter
     variables: { thoughtId: thoughtId },
   });
 
