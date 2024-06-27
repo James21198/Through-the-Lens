@@ -4,32 +4,29 @@ import { useLocation, useNavigate } from 'react-router-dom';
 const Footer = () => {
   const location = useLocation();
   const navigate = useNavigate();
-
   const footerStyle = {
-    backgroundColor: '#000000',
-    color: '#ffffff',
+    backgroundColor: '#white',
+    color: '#black',
     fontFamily: "'Roboto', sans-serif",
     paddingTop: '20px',
     paddingBottom: '10px',
     marginTop: 'auto',
-    textAlign: 'left', 
+    textAlign: 'left',
     paddingLeft: '20px',
     paddingRight: '20px',
+    borderTop: '1px solid #000', 
   };
-
   const logoStyle = {
-    width: '250px', 
+    width: '250px',
     height: 'auto',
     marginBottom: '15px',
   };
-
   const navItemStyle = {
     margin: '5px 0',
-    color: '#ffffff',
+    color: '#black',
     textDecoration: 'none',
     display: 'block',
   };
-
   const goBackButton = (
     <div className="text-center mb-5">
       <button className="btn btn-dark mb-3" onClick={() => navigate(-1)}>
@@ -37,36 +34,32 @@ const Footer = () => {
       </button>
     </div>
   );
-
   const pages = [
     { name: 'Home', link: '/' },
     { name: 'About', link: '/about' },
     { name: 'Subscribe', link: '/subscribe' },
   ];
-
   const insights = [
     { name: 'Spotlight' },
     { name: 'Galleries', link: '/galleries' },
     { name: 'Trends', link: '/trends' },
   ];
-
   const socialLinks = [
     { name: 'Twitter', link: 'https://twitter.com/example' },
     { name: 'LinkedIn', link: 'https://www.linkedin.com/in/example' },
     { name: 'Email', link: 'mailto:info@example.com' },
   ];
-
   return (
     <footer style={footerStyle}>
       {location.pathname !== '/' && goBackButton}
       <div className="row justify-content-between align-items-start">
-        <div className="col-md-3"> 
+        <div className="col-md-3">
           <a href="/"><img src="public/logo/Throughthelens.png" alt="Logo" style={logoStyle} /></a>
         </div>
         <div className="col-md-9 text-right">
           <div className="row">
             <div className="col-md-4">
-              <h5 style={{ color: '#fff' }}>Insights</h5>
+              <h5 style={{ color: '#black' }}>Insights</h5>
               <ul style={{ listStyleType: 'none', padding: 0 }}>
                 {insights.map((insight, index) => (
                   <li key={index}>
@@ -76,7 +69,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="col-md-4">
-              <h5 style={{ color: '#fff' }}>Pages</h5>
+              <h5 style={{ color: '#black' }}>Pages</h5>
               <ul style={{ listStyleType: 'none', padding: 0 }}>
                 {pages.map((page, index) => (
                   <li key={index}>
@@ -86,7 +79,7 @@ const Footer = () => {
               </ul>
             </div>
             <div className="col-md-4">
-              <h5 style={{ color: '#fff' }}>Contact</h5>
+              <h5 style={{ color: '#black' }}>Contact</h5>
               <ul style={{ listStyleType: 'none', padding: 0 }}>
                 {socialLinks.map((link, index) => (
                   <li key={index}>
