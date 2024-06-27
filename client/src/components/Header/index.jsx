@@ -7,11 +7,48 @@ const Header = () => {
     event.preventDefault();
     Auth.logout();
   };
+
+const headerStyle = {
+  color: '#fff',
+  backgroundColor: '#000',
+};
+
+const titleStyle = {
+  color: '#fff',
+};
+
+const containerStyle = {
+  height : '300px',
+};
+const linkStyle = {
+  color: '#fff',
+  textDecoration : 'none',
+};
+
+const linkStyle2 = {
+  color: '#000',
+  backgroundColor: '#fff',
+};
+
+const primaryBtn = {
+  backgroundColor: '#fff',
+  color: '#000',
+};
+
+const secondaryBtn = {
+  backgroundColor: '#000',
+  color: '#fff',
+  border: '1px solid #fff',
+  
+};
+
+
   return (
-    <header className="bg-primary text-light mb-4 py-3 flex-row align-center">
-      <div className="container flex-row justify-space-between-lg justify-center align-center">
-        <div>
-          <Link className="text-light" to="/">
+
+    <header style = {headerStyle} className="text-light mb-4 py-3 flex-row align-center">
+      <div style = {containerStyle} className="container flex-row justify-space-between-lg justify-center align-center">
+        <div style = {titleStyle} >
+          <Link style = {linkStyle} to="/">
             <h1 className="m-0">THROUGH THE LENS</h1>
           </Link>
           <p className="m-0">SEE THE WORLD THROUGH OUR LENS</p>
@@ -19,19 +56,19 @@ const Header = () => {
         <div>
           {Auth.loggedIn() ? (
             <>
-              <Link className="btn btn-lg btn-info m-2" to="/me">
+              <Link style = {linkStyle2} className="btn btn-lg btn-info m-2" to="/me">
                 {Auth.getProfile().data.username}'s profile
               </Link>
-              <button className="btn btn-lg btn-light m-2" onClick={logout}>
+              <button style = {secondaryBtn} className="btn btn-lg btn-light m-2" onClick={logout}>
                 Logout
               </button>
             </>
           ) : (
             <>
-              <Link className="btn btn-lg btn-info m-2" to="/login">
+              <Link style = {primaryBtn} className="btn btn-lg btn-info m-2" to="/login">
                 Login
               </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/signup">
+              <Link style = {secondaryBtn} className="btn btn-lg btn-light m-2" to="/signup">
                 Signup
               </Link>
             </>

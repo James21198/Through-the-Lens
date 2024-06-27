@@ -6,8 +6,8 @@ const Footer = () => {
   const navigate = useNavigate();
 
   const footerStyle = {
-    backgroundColor: '#2d3e50',
-    color: '#d9e9e8',
+    backgroundColor: '#000000',
+    color: '#ffffff',
     fontFamily: "'Roboto', sans-serif",
     paddingTop: '20px',
     paddingBottom: '10px',
@@ -25,7 +25,7 @@ const Footer = () => {
 
   const navItemStyle = {
     margin: '5px 0',
-    color: '#d9e9e8',
+    color: '#ffffff',
     textDecoration: 'none',
     display: 'block',
   };
