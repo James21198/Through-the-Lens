@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 const Footer = () => {
   const location = useLocation();
   const navigate = useNavigate();
+
   const footerStyle = {
     backgroundColor: '#white',
     color: '#black',
@@ -15,6 +16,8 @@ const Footer = () => {
     paddingLeft: '20px',
     paddingRight: '20px',
     borderTop: '1px solid #000', 
+    minHeight: '250px', 
+
   };
   const logoStyle = {
     width: '250px',
