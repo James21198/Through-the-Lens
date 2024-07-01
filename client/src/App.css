@@ -1023,7 +1023,9 @@ a:hover {
   background-color: #000000;
   color: #d9e9e8;
   border-radius: 5px;
-  width: 100%;
+  width: 50%;
+  margin: 0 auto;
+  display: block;
 }
 
 .btn.btn-primary:hover {

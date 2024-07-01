@@ -15,35 +15,30 @@ const ThoughtList = ({
       {showTitle && <h3>{title}</h3>}
       {thoughts &&
         thoughts.map((thought) => (
-          <div key={thought._id} className="card mb-3">
-            <h4 className="card-header bg-primary text-light p-2 m-0">
-              {showUsername ? (
-                <Link
-                  className="text-light"
-                  to={`/profiles/${thought.thoughtAuthor}`}
-                >
-                  {thought.thoughtAuthor} <br />
-                  <span style={{ fontSize: '1rem' }}>
-                    posted this blog on {thought.createdAt}
-                  </span>
-                </Link>
-              ) : (
-                <>
-                  <span style={{ fontSize: '1rem' }}>
-                    You posted this blog on {thought.createdAt}
-                  </span>
-                </>
-              )}
-            </h4>
-            <div className="card-body bg-light p-2">
-              <p>{thought.thoughtText}</p>
+          <div key={thought._id} className="card mb-3" style={{ width: '25rem' }}>
+            <img className="card-img-top p-2" src="https://via.placeholder.com/350" alt="Card image cap" />
+            <div className="card-body">
+              <h5 className="card-title p-2 m-0">
+                {showUsername ? (
+                  <Link className="text-dark" style={{ fontSize: '2rem' }} to={`/profiles/${thought.thoughtAuthor}`}>
+                    {thought.thoughtTitle} <br />{thought.thoughtAuthor} <br />
+                    <span style={{ fontSize: '1.2rem' }}>
+                      posted on {thought.createdAt}
+                    </span>
+                  </Link>
+                ) : (
+                  <>
+                    <span style={{ fontSize: '1rem' }}>
+                      You posted on {thought.createdAt}
+                    </span>
+                  </>
+                )}
+              </h5>
+              <p className="card-text bg-light p-2">{thought.thoughtText}</p>
+              <Link className="btn btn-primary" to={`/thoughts/${thought._id}`}>
+                Join the discussion on this blog post.
+              </Link>
             </div>
-            <Link
-              className="btn btn-primary btn-block btn-squared"
-              to={`/thoughts/${thought._id}`}
-            >
-              Join the discussion on this blog post.
-            </Link>
           </div>
         ))}
     </div>
