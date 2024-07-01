@@ -12,13 +12,15 @@ const Home = () => {
   return (
     <main>
       <div className="flex-row justify-center">
+        
         <div
           className="col-12 col-md-10 mb-3 p-3"
-          style={{ border: '1px dotted #1a1a1a' }}
+          style={{ border: '1px #1a1a1a' }}
         >
           <ThoughtForm />
         </div>
-        <div className="col-12 col-md-8 mb-3">
+        <div className="row justify-center"> 
+        <div className="col-12 col-md-8 mb-3 custom-card">
           {loading ? (
             <div>Loading...</div>
           ) : (
@@ -28,6 +30,7 @@ const Home = () => {
             />
           )}
         </div>
+      </div>
       </div>
     </main>
   );

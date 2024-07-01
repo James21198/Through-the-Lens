@@ -74,7 +74,7 @@ const ThoughtForm = () => {
             <div className="col-12 col-lg-9">
               <textarea
                 name="thoughtText"
-                placeholder="Here's a new thought..."
+                placeholder="Start making memories..."
                 value={thoughtText}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
@@ -84,7 +84,7 @@ const ThoughtForm = () => {
 
             <div className="col-12 col-lg-3">
               <button style= {primaryBtn} className="btn btn-primary btn-block py-3" type="submit">
-                Add Thought
+                Add Blog Post
               </button>
             </div>
             {error && (
@@ -96,7 +96,7 @@ const ThoughtForm = () => {
         </>
       ) : (
         <p>
-          You need to be logged in to share your thoughts. Please{' '}
+          You need to be logged in to post a blog. Please{' '}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}
