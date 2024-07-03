@@ -57,7 +57,7 @@ const Footer = () => {
       {location.pathname !== '/' && goBackButton}
       <div className="row justify-content-between align-items-start">
         <div className="col-md-3">
-          <a href="/"><img src="public/logo/Throughthelens.png" alt="Logo" style={logoStyle} /></a>
+          <a href="/"><img src="/logo/Throughthelens.png" alt="Logo" style={logoStyle} /></a>
         </div>
         <div className="col-md-9 text-right">
           <div className="row">

@@ -6,8 +6,13 @@ import CommentForm from '../components/CommentForm';
 
 import { QUERY_SINGLE_THOUGHT } from '../utils/queries';
 
+import * as React from "react";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+
 const SingleThought = () => {
   const { thoughtId } = useParams();
+  const [open, setOpen] = React.useState(false);
 
   const { loading, data } = useQuery(QUERY_SINGLE_THOUGHT, {
     variables: { thoughtId: thoughtId },
@@ -26,6 +31,23 @@ const SingleThought = () => {
           posted this blog on {thought.createdAt}
         </span>
       </h3>
+      <>
+      <button type="button" onClick={() => setOpen(true)}>
+        View Gallery
+      </button>
+
+      <Lightbox
+        open={open}
+        close={() => setOpen(false)}
+        slides={[
+          { src: "/1.jpg" },
+          { src: "/2.jpg" },
+          { src: "/3.jpg" },
+          { src: "/4.jpg" },
+          { src: "/5.jpg" }
+        ]}
+      />
+      </>
       <div className="bg-light py-4">
         <blockquote
           className="p-4"
