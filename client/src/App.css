@@ -1108,6 +1108,12 @@ a:hover {
   text-decoration: none;
 }
 
+.sliderimg{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .custom-card {
 
 }
