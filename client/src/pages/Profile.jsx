@@ -8,6 +8,8 @@ import ThoughtList from '../components/ThoughtList';
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 
 import Auth from '../utils/auth';
+import { useState } from 'react';
+import { ReactPhotoEditor } from 'react-photo-editor';
 
 const Profile = () => {
   const { username: userParam } = useParams();
@@ -17,6 +19,33 @@ const Profile = () => {
   });
 
   const user = data?.me || data?.user || {};
+
+  const [file, setFile] = useState();
+  const [showModal, setShowModal] = useState(false);
+
+  // Show modal if file is selected
+  const showModalHandler = () => {
+    if (file) {
+      setShowModal(true);
+    }
+  };
+
+  // Hide modal
+  const hideModal = () => {
+    setShowModal(false);
+  };
+
+  // Save edited image
+  const handleSaveImage = (editedFile) => {
+    setFile(editedFile);
+    setShowModal(false);
+  };
+
+  const setFileData = (e) => {
+    if (e?.target?.files && e.target.files.length > 0) {
+      setFile(e.target.files[0]);
+    }
+  };
 
   if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
     return <Navigate to="/me" />;
@@ -52,6 +81,7 @@ const Profile = () => {
           }
         `}
       </style>
+      
       <div className="flex-row justify-center mb-3">
         <h2 className="col-12 col-md-10 bg-dark text-light p-3 mb-5">
           Viewing {userParam ? `${user.username}'s` : 'your'} profile.
@@ -88,6 +118,29 @@ const Profile = () => {
           </div>
         )}
       </div>
+      <div style={{ margin: '1%' }}>
+      <input
+        type="file"
+        accept="image/png, image/jpeg, image/jpg"
+        onChange={(e) => setFileData(e)}
+        multiple={false}
+      />
+      <br />
+      <button
+        style={{ marginTop: '1rem', border: '1px solid ', padding: '5px' }}
+        onClick={showModalHandler}
+      >
+        Edit Image
+      </button>
+      <br />
+      <ReactPhotoEditor
+        open={showModal}
+        onClose={hideModal}
+        file={file}
+        onSaveImage={handleSaveImage}
+        downloadOnSave={true}
+      />
+    </div>
     </div>
   );
 };
