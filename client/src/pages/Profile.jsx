@@ -39,10 +39,16 @@ const Profile = () => {
     <div>
       <style>
         {`
+          @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
           .dotted-border {
             border: 1px dotted #1a1a1a;
             padding: 10px;
             margin-bottom: 10px;
+          }
+
+          .fancy-font {
+            font-family: 'Dancing Script', cursive;
           }
         `}
       </style>
@@ -53,8 +59,9 @@ const Profile = () => {
         <div className="col-12 col-md-10 mb-3">
           <div className="card mb-3">
             <h3 className="dotted-border">
-              Equipments {userParam ? `${user.username}'s` : 'your'} used:
-              <ul>
+              <img className="card-img-top p-2" src={`https://i.pravatar.cc/100?u=${user._id}`} alt="Card image cap" />
+              <ul className="fancy-font">Equipments {userParam ? `${user.username}'s` : 'your'} used:</ul>
+              <ul className="fancy-font">
                 <li>Canon EOS R5</li>
                 <li>Nikon Z7 II</li>
                 <li>Manfrotto 055 Aluminum 3-Section Tripod</li>
