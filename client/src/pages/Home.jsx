@@ -38,8 +38,11 @@ const Home = () => {
         >
           <ThoughtForm />
         </div>
-        <div className="row justify-center"> 
-        <div className="col-12 col-md-8 mb-3 custom-card">
+        <div className="flex-row justify-center"> 
+          <h1>BLOG SPOTLIGHT...</h1>
+        </div>
+        <div className="flex-row justify-center"> 
+        
           {loading ? (
             <div>Loading...</div>
           ) : (
@@ -48,7 +51,6 @@ const Home = () => {
               title="BLOG SPOTLIGHT..."
             />
           )}
-        </div>
       </div>
       </div>
     </main>

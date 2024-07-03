@@ -12,11 +12,10 @@ const ThoughtList = ({
 
   return (
     <>
-      {showTitle && <h3>{title}</h3>}
       {thoughts &&
         thoughts.map((thought) => (
           <div key={thought._id} className="card mb-3" style={{ width: '25rem' }}>
-            <img className="card-img-top p-2" src={`https://i.pravatar.cc/175?u=${thought.thoughtAuthor}`} alt="Card image cap" />
+            <img className="card-img-top p-2" src={`https://i.pravatar.cc/350?u=${thought.thoughtAuthor}`} alt="Card image cap" />
             <div className="card-body">
               <h5 className="card-title p-2 m-0">
                 {showUsername ? (
