@@ -1,3 +1,4 @@
+import React from 'react';
 import { Navigate, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
@@ -16,6 +17,7 @@ const Profile = () => {
   });
 
   const user = data?.me || data?.user || {};
+
   if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
     return <Navigate to="/me" />;
   }
@@ -35,11 +37,33 @@ const Profile = () => {
 
   return (
     <div>
+      <style>
+        {`
+          .dotted-border {
+            border: 1px dotted #1a1a1a;
+            padding: 10px;
+            margin-bottom: 10px;
+          }
+        `}
+      </style>
       <div className="flex-row justify-center mb-3">
         <h2 className="col-12 col-md-10 bg-dark text-light p-3 mb-5">
           Viewing {userParam ? `${user.username}'s` : 'your'} profile.
         </h2>
-
+        <div className="col-12 col-md-10 mb-3">
+          <div className="card mb-3">
+            <h3 className="dotted-border">
+              Equipments {userParam ? `${user.username}'s` : 'your'} used:
+              <ul>
+                <li>Canon EOS R5</li>
+                <li>Nikon Z7 II</li>
+                <li>Manfrotto 055 Aluminum 3-Section Tripod</li>
+                <li>Sony FE 16-35mm f/2.8 GM Lens</li>
+                <li>Wacom Intuos Pro Graphics Tablet</li>
+              </ul>
+            </h3>
+          </div>
+        </div>
         <div className="col-12 col-md-10 mb-5">
           <ThoughtList
             thoughts={user.thoughts}
