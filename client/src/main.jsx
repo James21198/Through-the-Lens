@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import SingleThought from './pages/SingleThought';
 import Profile from './pages/Profile';
 import ErrorPage from './pages/ErrorPage';
+import ImageEditor from './pages/imageEditor.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,9 @@ const router = createBrowserRouter([
       }, {
         path: '/login',
         element: <Login />
+      }, {
+        path: '/imageEditor',
+        element: <ImageEditor />
       }, {
         path: '/signup',
         element: <Signup />

@@ -56,6 +56,9 @@ const secondaryBtn = {
         <div>
           {Auth.loggedIn() ? (
             <>
+              <Link style = {primaryBtn} className="btn btn-lg btn-info m-2" to="/imageEditor">
+                Image Editor
+              </Link>
               <Link style = {linkStyle2} className="btn btn-lg btn-info m-2" to="/me">
                 {Auth.getProfile().data.username}'s profile
               </Link>
@@ -65,6 +68,9 @@ const secondaryBtn = {
             </>
           ) : (
             <>
+              <Link style = {primaryBtn} className="btn btn-lg btn-info m-2" to="/imageEditor">
+                Image Editor
+              </Link>
               <Link style = {primaryBtn} className="btn btn-lg btn-info m-2" to="/login">
                 Login
               </Link>
