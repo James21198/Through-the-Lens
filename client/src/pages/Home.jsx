@@ -14,6 +14,9 @@ import image3 from '/Carousel-3.jpg';
 import image4 from '/Carousel-4.jpg';
 import image5 from '/Carousel-5.jpg';
 import image6 from '/Carousel-6.jpg';
+import image8 from '/Carousel-8.jpg';
+import image9 from '/Carousel-9.jpg';
+import image10 from '/Carousel-10.jpg';
 
 const Home = () => {
   const { loading, data } = useQuery(QUERY_THOUGHTS);
@@ -30,6 +33,9 @@ const Home = () => {
           <img src = {image4} className="sliderimg" />
           <img src = {image5} className="sliderimg" />
           <img src = {image6} className="sliderimg" />
+          <img src = {image8} className="sliderimg" />
+          <img src = {image9} className="sliderimg" />
+          <img src = {image10} className="sliderimg" />
         </AliceCarousel>
       </div>
         <div

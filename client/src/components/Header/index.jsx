@@ -18,7 +18,7 @@ const titleStyle = {
 };
 
 const containerStyle = {
-  height : '300px',
+  height : '100px',
 };
 const linkStyle = {
   color: '#fff',
