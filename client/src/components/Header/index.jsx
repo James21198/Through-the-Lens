@@ -45,7 +45,7 @@ const secondaryBtn = {
 
   return (
 
-    <header style = {headerStyle} className="text-light mb-4 py-3 flex-row align-center">
+    <header style = {headerStyle} className="text-light py-3 flex-row align-center">
       <div style = {containerStyle} className="container flex-row justify-space-between-lg justify-center align-center">
         <div style = {titleStyle} >
           <Link style = {linkStyle} to="/">
