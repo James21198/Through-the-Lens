@@ -65,7 +65,7 @@ const ThoughtForm = () => {
               characterCount === 280 || error ? 'text-danger' : ''
             }`}
           >
-            Character Count: {characterCount}/280
+            Character Count: {characterCount}/2000
           </p>
           <form
             className="flex-row justify-center justify-space-between-md align-center"
