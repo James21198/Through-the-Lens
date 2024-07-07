@@ -25,14 +25,16 @@ const SingleThought = () => {
   }
   return (
     <div className="my-3">
-      <h3 className="card-header bg-dark text-light p-2 m-0">
+      <h3 className="card-header text-dark p-2 m-0">
         {thought.thoughtAuthor} <br />
-        <span style={{ fontSize: '1rem' }}>
+        <img className="p-2" style={{ width: '80px', height: '80px', borderRadius: '50%'}} src={`https://i.pravatar.cc/60?u=${thought.thoughtAuthor}`} alt="Card image cap" />
+        <br />
+        <span style={{ fontSize: '1rem', fontStyle: 'italic'}}>
           posted this blog on {thought.createdAt}
         </span>
       </h3>
       <>
-      <button type="button" onClick={() => setOpen(true)}>
+      <button className="btn btn-primary" style={{ marginTop: '30px', width: '20%'}} onClick={() => setOpen(true)}>
         View Gallery
       </button>
 
@@ -52,9 +54,10 @@ const SingleThought = () => {
         <blockquote
           className="p-4"
           style={{
-            fontSize: '1.5rem',
-            fontStyle: 'italic',
-            border: '2px dotted #1a1a1a',
+            fontSize: '1.2rem',
+            color: 'gray',
+            border: '1px solid #1a1a1a',
+            borderRadius: '0.5rem',
             lineHeight: '1.5',
           }}
         >
@@ -65,7 +68,12 @@ const SingleThought = () => {
       <div className="my-5">
         <CommentList comments={thought.comments} />
       </div>
-      <div className="m-3 p-4" style={{ border: '1px dotted #1a1a1a' }}>
+      <div className="m-3 p-4" style={{ 
+        borderRadius: '0.5rem',
+        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+        transition: 'transform 0.2s, box-shadow 0.2s', 
+
+        }}>
         <CommentForm thoughtId={thought._id} />
       </div>
     </div>

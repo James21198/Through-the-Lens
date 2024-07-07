@@ -7,12 +7,12 @@ const ThoughtList = ({
   showUsername = true,
 }) => {
 
-  const truncateText = (text) => {
-    if (text.length > 10) {
-      return text.substring(0, 10) + '...';
-    } else {
+  const truncateText = (text, wordCount) => {
+    const words = text.split(' ');
+    if (words.length <= wordCount) {
       return text;
     }
+    return words.slice(0, wordCount).join(' ') + '...';
   };
 
   const randomImages = [
@@ -58,8 +58,9 @@ const ThoughtList = ({
                   </span>
                 )}
               </h5>
-              <p className="card-text bg-light p-2">{thought.thoughtText}</p>
-              <Link className="btn btn-primary" to={`/thoughts/${thought._id}`}>
+               <p className="card-text bg-light p-2">
+              {truncateText(thought.thoughtText, 10)} 
+              </p>              <Link className="btn btn-primary" to={`/thoughts/${thought._id}`}>
                 Join the discussion on this blog post.
               </Link>
             </div>

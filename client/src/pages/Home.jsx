@@ -45,7 +45,7 @@ const Home = () => {
           <ThoughtForm />
         </div>
         <div className="flex-row justify-center"> 
-          <h1>BLOG SPOTLIGHT...</h1>
+          <h1>Blog Spotlight</h1>
         </div>
         <div className="flex-row justify-center"> 
         
@@ -54,7 +54,7 @@ const Home = () => {
           ) : (
             <ThoughtList
               thoughts={thoughts}
-              title="BLOG SPOTLIGHT..."
+              title="Blog Spotlight"
             />
           )}
       </div>

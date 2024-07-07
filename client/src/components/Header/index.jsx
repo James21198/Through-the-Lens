@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import Auth from '../../utils/auth';
+import { height, width } from '@fortawesome/free-brands-svg-icons/fa42Group';
 
 const Header = () => {
   const logout = (event) => {
@@ -11,6 +12,7 @@ const Header = () => {
 const headerStyle = {
   color: '#fff',
   backgroundColor: '#000',
+
 };
 
 const titleStyle = {
@@ -18,7 +20,12 @@ const titleStyle = {
 };
 
 const containerStyle = {
-  height : '100px',
+  height : '150px',
+  marginBottom: '0',
+  '@media (min-width: 640px)': {
+    height : '400px',
+    marginBottom: '100rem',
+  },
 };
 const linkStyle = {
   color: '#fff',
@@ -28,17 +35,34 @@ const linkStyle = {
 const linkStyle2 = {
   color: '#000',
   backgroundColor: '#fff',
+  fontSize: '1rem', 
+  padding: '0.5rem 1rem', 
+  '@media (min-width: 640px)': {
+    fontSize: '0.75rem',
+    padding: '0.4rem 0.8rem',
+  },
 };
 
 const primaryBtn = {
   backgroundColor: '#fff',
   color: '#000',
+  fontSize: '1rem', 
+  padding: '0.5rem 1rem',
+  '@media (min-width: 640px)': {
+    fontSize: '0.75rem',
+    padding: '0.4rem 0.8rem',
+  },
 };
 
 const secondaryBtn = {
   backgroundColor: '#000',
   color: '#fff',
   border: '1px solid #fff',
+  fontSize: '1rem',
+  padding: '0.5rem 1rem', 
+  '@media (min-width: 640px)': {
+    width: '10%',
+  },
   
 };
 

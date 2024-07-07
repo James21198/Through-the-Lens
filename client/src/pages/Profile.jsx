@@ -40,29 +40,41 @@ const Profile = () => {
     <div>
       <style>
         {`
-          @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
-
-          .dotted-border {
-            border: 1px dotted #1a1a1a;
-            padding: 10px;
-            margin-bottom: 10px;
+          .border {
+            padding: 30px;
+          }
+          
+          .card-profile {
+            width: 50%;
+            border: 1px solid lightgray;
+            border-radius: 30px; 
+            margin-bottom: 1rem;
+            margin: 0.5rem;
+            padding: 0.20rem; 
+            background-color: #fff; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s; 
           }
 
           .fancy-font {
-            font-family: 'Dancing Script', cursive;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            line-height: 1.5;
           }
         `}
       </style>
       
       <div className="flex-row justify-center mb-3">
-        <h2 className="col-12 col-md-10 bg-dark text-light p-3 mb-5">
-          Viewing {userParam ? `${user.username}'s` : 'your'} profile.
+        <h2 style={{ marginTop: '20px'}} className="col-12 col-md-10 text-dark p-3 mb-5">
+          Viewing {userParam ? `${user.username}'s` : 'Your'} Profile
         </h2>
         <div className="col-12 col-md-10 mb-3">
-          <div className="card mb-3">
-            <h3 className="dotted-border">
+          <div className="card-profile mb-3">
+            <h3 className="border">
               <img className="card-img-top p-2" src={`https://i.pravatar.cc/100?u=${user._id}`} alt="Card image cap" />
-              <ul className="fancy-font">Equipments {userParam ? `${user.username}'s` : 'your'} used:</ul>
+              <ul className="fancy-font">Equipments {userParam ? `${user.username}'s` : 'you'} used:</ul>
               <ul className="fancy-font">
                 <li>Canon EOS R5</li>
                 <li>Nikon Z7 II</li>
@@ -73,10 +85,11 @@ const Profile = () => {
             </h3>
           </div>
         </div>
+        <h1 className="col-12 col-md-10 text-dark p-3 mb-5">{userParam ? `${user.username}'s` : 'Your'} blogposts...</h1>
         <div className="col-12 col-md-10 mb-5">
           <ThoughtList
             thoughts={user.thoughts}
-            title={`${user.username}'s thoughts...`}
+            
             showTitle={false}
             showUsername={false}
           />
@@ -84,7 +97,11 @@ const Profile = () => {
         {!userParam && (
           <div
             className="col-12 col-md-10 mb-3 p-3"
-            style={{ border: '1px dotted #1a1a1a' }}
+            style={{ 
+              borderRadius: '1rem',
+              boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+              transition: 'transform 0.2s, box-shadow 0.2s', 
+            }}
           >
             <ThoughtForm />
           </div>

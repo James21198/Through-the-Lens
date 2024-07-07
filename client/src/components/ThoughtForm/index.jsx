@@ -48,12 +48,6 @@ const ThoughtForm = () => {
     }
   };
 
-  const primaryBtn = {
-    backgroundColor: '#000',
-    color: '#fff',
-    border: '1px solid #fff',
-  }
-
   return (
     <div>
       <h3>What can you picture adding on your page?</h3>
@@ -83,7 +77,7 @@ const ThoughtForm = () => {
             </div>
 
             <div className="col-12 col-lg-3">
-              <button style= {primaryBtn} className="btn btn-primary btn-block py-3" type="submit">
+              <button className="btn btn-prim btn-block py-3" type="submit">
                 Add Blog Post
               </button>
             </div>
