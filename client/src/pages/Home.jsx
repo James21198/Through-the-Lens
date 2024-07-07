@@ -32,10 +32,10 @@ const Home = () => {
           <img src = {image3} className="sliderimg" />
           <img src = {image4} className="sliderimg" />
           <img src = {image5} className="sliderimg" />
-          <img src = {image6} className="sliderimg" />
           <img src = {image8} className="sliderimg" />
+          <img src = {image10} className="sliderimg"/>
           <img src = {image9} className="sliderimg" />
-          <img src = {image10} className="sliderimg" />
+          <img src = {image6} className="sliderimg" />
         </AliceCarousel>
       </div>
         <div
