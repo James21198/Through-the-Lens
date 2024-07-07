@@ -15,11 +15,11 @@ GraphQL
 NPM
 
 ## Screenshots
-![Header](screenshots/Header.png)
-![Spotlight](screenshots/Spotlight.png)
-![Profile](screenshots/Profile.png)
-![Thoughts](screenshots/Thoughts.png)
-![Footer](screenshots/Footer.png)
+![Header](Header.png)
+![Spotlight](Spotlight.png)
+![Profile](Profile.png)
+![Thoughts](Thoughts.png)
+![Footer](Footer.png)
 
 
 
