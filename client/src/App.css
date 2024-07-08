@@ -1450,6 +1450,12 @@ label form [type='radio'] {
     display: none;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .carousel-container {
+    max-width: 120%; 
+  }
+}
 @media screen and (min-width: 640px) {
   .col-sm-auto {
     flex-grow: 1;
@@ -1640,6 +1646,9 @@ label form [type='radio'] {
   }
   .align-content-center-md {
     align-content: center;
+  }
+  .carousel-container {
+    max-width: 120%; 
   }
 }
 

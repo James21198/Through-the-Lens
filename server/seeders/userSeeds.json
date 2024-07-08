@@ -23,5 +23,35 @@
     "username": "Jack Jones",
     "email": "Jack.Jones@email.com",
     "password": "password05"
+  },
+  {
+    "username": "Jasmine Collins",
+    "email": "Jasmine.Collins@email.com",
+    "password": "password06"
+  },
+  {
+    "username": "Ariana Quinn",
+    "email": "Ariana.Quinn@email.com",
+    "password": "password07"
+  },
+  {
+    "username": "Owen Blake",
+    "email": "Owen.Blake@email.com",
+    "password": "password08" 
+  },
+  {
+    "username": "Maxwell Rhodes",
+    "email": "Maxwell.Rhodes@email.com",
+    "password": "password09"
+  },
+  {
+    "username": "Liam Beckett",
+    "email": "Liam.Beckett@email.com",
+    "password": "password10"
+  },
+  {
+    "username": "Evelyn Hart",
+    "email": "Evelyn.Hart@email.com",
+    "password": "password11"
   }
 ]
