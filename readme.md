@@ -1,4 +1,4 @@
-# Through the Lens (MERN Stack Application)
+# Through the Lens 
 
 ## Description
 Through the Lens is a platform where photographers can connect, showcase their work, share insights, and build relationships with others who love photography.
