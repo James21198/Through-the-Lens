@@ -20,7 +20,7 @@ const titleStyle = {
 };
 
 const containerStyle = {
-  height : '150px',
+  height : 'auto',
   marginBottom: '0',
   '@media (min-width: 640px)': {
     height : '400px',

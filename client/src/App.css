@@ -1445,12 +1445,6 @@ label form [type='radio'] {
 }
 
 /* col-sm */
-@media screen and (max-width: 600px) {
-  .App {
-    display: none;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .carousel-container {
     max-width: 120%; 
