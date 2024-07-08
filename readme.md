@@ -5,13 +5,6 @@ Through the Lens is a platform where photographers can connect, showcase their w
 
 The motivation behind this project was to fill a gap in the market that allows all of the photographers out in the world to be able to come together as a whole and share their photos and thoughts with the photographer community.
 
-## Table of Contents 
-
-* [Technologies Used](#technologies-used)
-* [Images](#images)
-* [License](#license)
-* [Links](#links)
-
 ## Technologies used:
 
 * MONGODB
